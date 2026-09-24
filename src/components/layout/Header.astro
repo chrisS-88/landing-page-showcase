@@ -1,0 +1,70 @@
+---
+import { navigation } from "../../data/navigation";
+import { site } from "../../data/site";
+import NavLink from "../ui/NavLink.astro";
+---
+
+<header class="py-6">
+  <nav
+    id="site-nav"
+    class="fixed top-0 left-0 w-full h-20 flex justify-between items-center px-6 font-heading tracking-wide uppercase z-50 bg-background transition-transform duration-300 shadow-lg">
+    <a href="/" class="text-xl font-semibold text-text"> {site.name} </a>
+
+    <!-- decktop menu -->
+    <ul class="hidden lg:flex gap-5">
+      {
+        navigation.map((link) => {
+          return (
+            <li>
+              <NavLink {...link} />
+            </li>
+          );
+        })
+      }
+    </ul>
+
+    <!-- Mobile Button -->
+    <button
+      id="menu-btn"
+      class="lg:hidden flex flex-col justify-center items-center w-10 h-10 space-y-1 focus:outline-none cursor-pointer"
+      aria-label="Toggle Menu">
+      <span class="hamburger-bar transition-transform"></span>
+      <span class="hamburger-bar transition-opacity"></span>
+      <span class="hamburger-bar transition-transform"></span>
+    </button>
+
+    <!-- Mobile Sidebar -->
+    <div
+      id="mobile-menu"
+      class="p-4 z-50 lg:hidden fixed left-0 top-0 h-full w-2/3 bg-background backdrop-blur-md transform -translate-x-full transition-all duration-700 ease-in-out opacity-0 text-light overflow-y-scroll">
+      <span class="text-xl">Site Name</span>
+
+      <div class="w-full h-[.5px] bg-accent mt-6"></div>
+
+      <ul class="flex flex-col justify-center gap-6 text-2xl px-4 py-24">
+        {
+          navigation.map((link) => {
+            return (
+              <li>
+                <NavLink {...link} />
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <div class="w-full h-[.5px] bg-accent mb-6"></div>
+
+      <div class="capitalize text-xs">
+        <div class="mt-16">
+          <p>© {new Date().getFullYear()} Your Company Name</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <script type="module">
+    import { initNavigation } from "../../scripts/navigation";
+    initNavigation();
+  </script>
+</header>

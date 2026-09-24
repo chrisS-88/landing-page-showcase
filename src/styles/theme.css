@@ -1,0 +1,49 @@
+@theme {
+  /* =====================
+     Colours
+  ====================== */
+
+  /* Surfaces */
+  --color-background: #faf9f7;
+  --color-foreground: #18181b;
+  --color-surface: #ffffff;
+
+  /* Text */
+  --color-text: #18181b;
+  --color-text-muted: #71717a;
+
+  /* UI */
+  --color-border: #e4e4e7;
+
+  /* Brand */
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+
+  /* =====================
+     Typography
+  ====================== */
+
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Inter", sans-serif;
+
+  /* =====================
+     Radius
+  ====================== */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* =====================
+     Shadows
+  ====================== */
+
+  --shadow-card: 0 10px 30px rgb(0 0 0 / 0.06);
+
+  /* =====================
+     Layout
+  ====================== */
+
+  --container-width: 80rem;
+}
