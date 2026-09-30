@@ -1,9 +1,42 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import PortfolioCard from "../components/ui/home/PortfolioCard.astro";
+import HomeLayout from "../layouts/HomeLayout.astro";
+
+const projects = [
+  {
+    title: "PrimeDomain.io",
+    description: "Sell premium digital assets with confidence.",
+    href: "/primeDomain",
+  },
+  {
+    title: "Summit Roofing",
+    description: "Turn website visitors into qualified quote requests.",
+    href: "/summitRoofing",
+  },
+  {
+    title: "FlowStack",
+    description: "Convert curious prospects into active users.",
+    href: "#",
+  },
+];
 ---
 
-<BaseLayout>
+<HomeLayout title="Landing Page Showcase">
   <section class="pt-24">
-    <h1>My Astro Template</h1>
+    <div class="max-w-4xl px-6 mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold">
+        Three landing pages <br />
+        Three industries <br />
+        One goal
+      </h1>
+
+      <p class="text-lg mt-3 text-text-muted">Responsive landing pages designed to turn visitors into customers.</p>
+    </div>
   </section>
-</BaseLayout>
+
+  <section class="py-24">
+    <div class="px-6 max-w-5xl grid md:grid-cols-3 gap-12 mx-auto">
+      {projects.map((project) => <PortfolioCard items={project} />)}
+    </div>
+  </section>
+</HomeLayout>

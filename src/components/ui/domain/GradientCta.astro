@@ -1,0 +1,38 @@
+---
+interface Cta {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+}
+
+const { eyebrow, title, subtitle } = Astro.props;
+---
+
+<section class="mx-4 my-10 rounded-[50px] bg-linear-90 from-accent/70 via-accent/5 to-accent/70 px-6 py-20 text-center md:mx-12">
+  <div class="mx-auto max-w-3xl">
+    <span class="text-sm font-medium uppercase tracking-wide"> {eyebrow} </span>
+
+    <h2 class="mt-4 text-4xl font-semibold tracking-tight md:text-5xl">{title}</h2>
+
+    <p class="mx-auto mt-5 max-w-xl text-lg text-text-muted">{subtitle}</p>
+
+    <form class="mx-auto mt-10 flex max-w-xl flex-col gap-3 sm:flex-row" action="#" method="get">
+      <label for="final-domain" class="sr-only"> Search for a domain </label>
+
+      <input
+        id="final-domain"
+        name="domain"
+        type="text"
+        placeholder="yourdomain.com"
+        class="min-w-0 flex-1 rounded-full bg-surface px-5 py-3 outline-1 outline-accent focus:outline-2"
+      />
+
+      <button
+        data-demo
+        type="submit"
+        class="rounded-full bg-accent/90 hover:bg-accent cursor-pointer px-6 py-3 font-medium text-white transition-colors hover:bg-accent-hover">
+        Search domains
+      </button>
+    </form>
+  </div>
+</section>

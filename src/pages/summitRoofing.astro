@@ -1,0 +1,230 @@
+---
+import SummitLayout from "../layouts/SummitLayout.astro";
+import heroImg from "../assets/images/roof_hero.jpg";
+import { Image } from "astro:assets";
+import Shield from "../components/svgs/summitRoofing/Shield.astro";
+import Check from "../components/svgs/summitRoofing/Check.astro";
+import Money from "../components/svgs/summitRoofing/Money.astro";
+---
+
+<SummitLayout title="Summit Roofing">
+  <div class="border-b border-border bg-background">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5 text-xs md:px-12">
+      <a href="/" class="text-text-muted transition-colors hover:text-text"> ← Back to portfolio </a>
+
+      <span class="text-text-muted"> Portfolio concept </span>
+    </div>
+  </div>
+
+  <header class="bg-surface">
+    <div class="max-w-7xl px-6 flex justify-between">
+      <div class="relative">
+        <a href="#"><img src="/summit_logo.png" alt="logo" class="w-26" /></a>
+        <span class="absolute bottom-4 uppercase font-semibold text-xs tracking-widest text-background font-heading min-w-max"
+          >Summit Roofing</span
+        >
+      </div>
+
+      <div class="flex flex-col md:flex-row items-center md:gap-6">
+        <span class="text-background text-xl py-3 md:py-0 font-semibold">(01234) 123 456</span>
+        <button class="py-2 px-6 inline min-w-max bg-accent text-background uppercase rounded-xs cursor-pointer hover:brightness-105"
+          >Request a free quote</button
+        >
+      </div>
+    </div>
+  </header>
+
+  <!-- =============== HERO ================= -->
+  <section class="relative min-h-120 overflow-hidden">
+    <div class="relative h-80 md:absolute md:inset-0 md:h-auto">
+      <Image src={heroImg} alt="roofing repair" class="h-full w-full object-cover" loading="eager" />
+
+      <div class="absolute inset-0 bg-surface/55 md:bg-linear-90 md:from-surface/95 md:via-surface/75 md:to-transparent"></div>
+    </div>
+
+    <div class="relative bg-surface md:bg-transparent z-10 mx-auto flex min-h-120 max-w-7xl items-center px-6 py-20 md:px-12">
+      <div class="max-w-2xl text-background">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-background/80">Roofing & Roof Repairs · Yorkshire</p>
+
+        <h1 class="mt-5 text-5xl font-semibold tracking-tight md:text-7xl">
+          Reliable roofing,
+          <span class="text-background"> built to last.</span>
+        </h1>
+
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-background/80 md:text-xl">
+          From repairs and maintenance to complete roof replacements, we provide dependable roofing services for homes across Yorkshire.
+        </p>
+
+        <div class="mt-10 flex flex-col border-y border-background/20 py-6 sm:flex-row sm:items-center gap-6 md:gap-12">
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center">
+              <Shield class="text-accent" />
+            </div>
+            <div>
+              <p class="text-sm font-semibold">20+ Years' Experience</p>
+              <p class="text-xs text-background/60">Trusted workmanship</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center">
+              <Check class="text-accent" />
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold">Fully Insured</p>
+              <p class="text-xs text-background/60">Work you can trust</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <div class="flex h-10 w-10 shrink-0 items-center justify-center">
+              <Money class="text-accent" />
+            </div>
+
+            <div>
+              <p class="text-sm font-semibold">Free Quotations</p>
+              <p class="text-xs text-background/60">No obligation</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a
+            href="#quote"
+            class="inline-flex items-center rounded-xs bg-background px-7 py-3.5 text-sm font-semibold text-black transition-transform hover:-translate-y-0.5">
+            Request a Free Quote
+            <span class="ml-2">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SERVICES INTRO ================= -->
+
+  <section class="bg-background px-6 py-24 md:px-12 md:py-32">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-16 md:grid-cols-[0.8fr_1.2fr] md:gap-24">
+        <div class="md:sticky md:top-24 md:self-start">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">What we do</p>
+
+          <h2 class="mt-4 max-w-lg font-heading text-4xl font-semibold tracking-tight text-text md:text-5xl">
+            Roofing services, from repairs to replacements.
+          </h2>
+
+          <p class="mt-6 max-w-md text-base leading-7 text-text/65 md:text-lg">
+            Whether you need a small repair or a completely new roof, we provide practical roofing solutions tailored to your property.
+          </p>
+
+          <a href="#quote" class="mt-8 inline-flex items-center text-sm font-semibold text-text transition-colors hover:text-accent">
+            Discuss your roofing needs
+            <span class="ml-2">→</span>
+          </a>
+        </div>
+
+        <div class="divide-y divide-border border-y border-border">
+          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 01 </span>
+
+              <h3 class="mt-2 font-heading text-2xl font-semibold text-text">Roof Repairs</h3>
+
+              <p class="mt-2 max-w-xl text-sm leading-6 text-text/60">
+                From damaged tiles and leaks to general wear and tear, we can identify the problem and put it right.
+              </p>
+            </div>
+
+            <span class="hidden text-2xl text-text/30 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block"> → </span>
+          </a>
+
+          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 02 </span>
+
+              <h3 class="mt-2 font-heading text-2xl font-semibold text-text">Roof Replacement</h3>
+
+              <p class="mt-2 max-w-xl text-sm leading-6 text-text/60">
+                Complete roofing replacements designed to protect your home and provide a finish that lasts.
+              </p>
+            </div>
+
+            <span class="hidden text-2xl text-text/30 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block"> → </span>
+          </a>
+
+          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 03 </span>
+
+              <h3 class="mt-2 font-heading text-2xl font-semibold text-text">Roof Maintenance</h3>
+
+              <p class="mt-2 max-w-xl text-sm leading-6 text-text/60">
+                Keep your roof in good condition with preventative maintenance and repairs before small issues become bigger ones.
+              </p>
+            </div>
+
+            <span class="hidden text-2xl text-text/30 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block"> → </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== WHY SUMMIT ================= -->
+
+  <section class="bg-surface px-6 py-24 text-background md:px-12 md:py-32">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-16 md:grid-cols-2 md:items-end">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Why Summit</p>
+
+          <h2 class="mt-4 max-w-2xl font-heading text-4xl font-semibold tracking-tight md:text-6xl">
+            A straightforward approach to roofing.
+          </h2>
+        </div>
+
+        <div>
+          <p class="max-w-xl text-base text-background/80 md:text-lg">
+            We believe good roofing work starts with doing things properly. From the first conversation to the final inspection, you can
+            expect clear communication, honest advice and quality workmanship.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-20 grid border-y border-background/15 md:grid-cols-3">
+        <!-- Item -->
+        <div class="border-b border-background/15 py-10 md:border-r md:pr-10">
+          <span class="font-heading text-4xl font-semibold text-accent"> 20+ </span>
+
+          <h3 class="mt-5 text-xl font-semibold">Years of experience</h3>
+
+          <p class="mt-3 text-sm leading-6 text-background/55">
+            Decades of experience across roofing repairs, maintenance and complete roofing projects.
+          </p>
+        </div>
+
+        <!-- Item -->
+        <div class="border-b border-background/15 py-10 md:border-b-0 md:border-r md:px-10">
+          <span class="font-heading text-4xl font-semibold text-accent"> 100% </span>
+
+          <h3 class="mt-5 text-xl font-semibold">Fully insured</h3>
+
+          <p class="mt-3 text-sm leading-6 text-background/55">
+            Professional work carried out with the appropriate insurance and care for your property.
+          </p>
+        </div>
+
+        <!-- Item -->
+        <div class="py-10 md:pl-10">
+          <span class="font-heading text-4xl font-semibold text-accent uppercase"> Free </span>
+
+          <h3 class="mt-5 text-xl font-semibold">No-obligation quotes</h3>
+
+          <p class="mt-3 text-sm leading-6 text-background/55">
+            Tell us what you need and we'll provide a clear quote with no pressure to go ahead.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</SummitLayout>

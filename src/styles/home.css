@@ -1,30 +1,25 @@
+@import "tailwindcss";
+
 @theme {
   /* =====================
      Colours
   ====================== */
 
-  /* Surfaces */
-  --color-background: #faf9f7;
-  --color-foreground: #18181b;
+  --color-background: #f0f0f0;
   --color-surface: #ffffff;
 
   /* Text */
-  --color-text: #18181b;
-  --color-text-muted: #71717a;
-
-  /* UI */
-  --color-border: #e4e4e7;
+  --color-text: #242424;
+  --color-text-muted: #515151;
 
   /* Brand */
   --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
 
   /* =====================
      Typography
   ====================== */
 
-  --font-body: "Inter", sans-serif;
-  --font-heading: "Inter", sans-serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
 
   /* =====================
      Radius
@@ -46,4 +41,28 @@
   ====================== */
 
   --container-width: 80rem;
+}
+
+/* ====================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
 }

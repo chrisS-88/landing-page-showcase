@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+.test {
+  color: #fcfcfc;
+}
+
+@theme {
+  /* =====================
+     Colours
+  ====================== */
+
+  --color-background: #fcfcfc;
+  --color-surface: #1f2b36;
+
+  /* Text */
+  --color-text: #141414;
+  --color-text-muted: #494949;
+
+  /* UI */
+  --color-border: #cecece;
+
+  /* Brand */
+  --color-accent: #8ab831;
+
+  /* =====================
+     Typography
+  ====================== */
+
+  --font-heading: "Montserrat", sans-serif;
+  --font-body: "Roboto", sans-serif;
+
+  /* =====================
+     Radius
+  ====================== */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* =====================
+     Shadows
+  ====================== */
+
+  --shadow-card: 0 10px 30px rgb(0 0 0 / 0.06);
+
+  /* =====================
+     Layout
+  ====================== */
+
+  --container-width: 80rem;
+}
+
+/* ====================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight font-heading;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}

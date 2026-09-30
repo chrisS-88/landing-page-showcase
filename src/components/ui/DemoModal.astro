@@ -1,0 +1,81 @@
+---
+interface Props {
+  title?: string;
+  message?: string;
+}
+
+const { title = "This is only a demo", message = "This feature isn't available in this portfolio concept." } = Astro.props;
+---
+
+<div id="demo-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/30 px-6 backdrop-blur-sm" aria-hidden="true">
+  <div role="dialog" aria-modal="true" aria-labelledby="demo-modal-title" class="w-full max-w-sm rounded-3xl bg-white p-7 shadow-xl">
+    <div class="flex items-start justify-between gap-6">
+      <div>
+        <h2 id="demo-modal-title" class="text-xl font-semibold">
+          {title}
+        </h2>
+
+        <p class="mt-3 text-sm leading-6 text-gray-600">
+          {message}
+        </p>
+      </div>
+
+      <button
+        id="demo-modal-close"
+        type="button"
+        aria-label="Close"
+        class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-gray-100 hover:text-gray-900">
+        ×
+      </button>
+    </div>
+
+    <button
+      id="demo-modal-confirm"
+      type="button"
+      class="mt-6 w-full rounded-full bg-accent/90 hover:bg-accent cursor-pointer px-5 py-3 text-sm font-medium text-white transition-colors hover:bg-accent-hover">
+      Got it
+    </button>
+  </div>
+</div>
+
+<script>
+  const modal = document.querySelector("#demo-modal");
+  const closeButton = document.querySelector("#demo-modal-close");
+  const confirmButton = document.querySelector("#demo-modal-confirm");
+
+  const closeModal = () => {
+    modal?.classList.add("hidden");
+    modal?.classList.remove("flex");
+    modal?.setAttribute("aria-hidden", "true");
+  };
+
+  const openModal = () => {
+    modal?.classList.remove("hidden");
+    modal?.classList.add("flex");
+    modal?.setAttribute("aria-hidden", "false");
+  };
+
+  closeButton?.addEventListener("click", closeModal);
+  confirmButton?.addEventListener("click", closeModal);
+
+  modal?.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+
+    if (target.closest("[data-demo]")) {
+      event.preventDefault();
+      openModal();
+    }
+  });
+</script>

@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  /* =====================
+     Colours
+  ====================== */
+
+  --color-background: #eae8e4;
+  --color-surface: #f3f3f3;
+
+  /* Text */
+  --color-text: #18181b;
+  --color-text-muted: #71717a;
+
+  /* UI */
+  --color-border: #e2e2e2;
+
+  /* Brand */
+  --color-accent: #f1a102;
+
+  /* =====================
+     Typography
+  ====================== */
+
+  --font-body: "Geist Mono", monospace;
+
+  /* =====================
+     Radius
+  ====================== */
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* =====================
+     Shadows
+  ====================== */
+
+  --shadow-card: 0 10px 30px rgb(0 0 0 / 0.06);
+
+  /* =====================
+     Layout
+  ====================== */
+
+  --container-width: 80rem;
+}
+
+/* ====================================================== */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-text font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}

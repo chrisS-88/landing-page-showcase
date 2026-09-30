@@ -1,0 +1,22 @@
+---
+interface Project {
+  title: string;
+  description: string;
+  image?: ImageMetadata;
+  href?: string;
+}
+
+interface Props {
+  items: Project;
+}
+
+const { items } = Astro.props;
+---
+
+<article class="bg-white rounded-md p-4">
+  <div class="mb-6">
+    <h3 class="font-bold text-lg">{items.title}</h3>
+    <p class="text-text-muted text-sm">{items.description}</p>
+  </div>
+  <a class="bg-text-muted text-background px-5 py-1 rounded-full font-semibold hover:bg-text transition-colors" href={items.href}>View</a>
+</article>

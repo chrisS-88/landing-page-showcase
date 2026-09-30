@@ -1,0 +1,276 @@
+---
+import { Image } from "astro:assets";
+import Login from "../components/svgs/primeDomain/Login.astro";
+import DomainLayout from "../layouts/DomainLayout.astro";
+import Sparkle from "../components/svgs/primeDomain/Sparkle.astro";
+import Tag from "../components/svgs/primeDomain/Tag.astro";
+import Trending from "../components/svgs/primeDomain/Trending.astro";
+import GradientCta from "../components/ui/domain/GradientCta.astro";
+import DemoModal from "../components/ui/DemoModal.astro";
+---
+
+<DomainLayout title="Prime Domain">
+  <DemoModal />
+
+  <div class="border-b border-border bg-background">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-2.5 text-xs md:px-12">
+      <a href="/" class="text-text-muted transition-colors hover:text-text"> ← Back to portfolio </a>
+
+      <span class="text-text-muted"> Portfolio concept </span>
+    </div>
+  </div>
+
+  <header class="px-6 py-6 md:px-12">
+    <div class="mx-auto flex max-w-6xl items-center justify-between">
+      <a href="#" class="text-lg font-semibold tracking-tight text-text transition-opacity hover:opacity-70"> Prime Domain </a>
+
+      <button
+        data-demo
+        class="flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-text transition-all hover:border-accent cursor-pointer">
+        <Login class="h-4 w-4" />
+        <span>Log in</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============= HERO ============== -->
+  <GradientCta
+    eyebrow="Find your name"
+    title="A domain for whatever comes next."
+    subtitle="Search, discover and secure a domain name that gives your next idea a place to start."
+  />
+
+  <!-- ============= TRUST ============== -->
+  <section class="mx-4 md:mx-12 py-12">
+    <div class="mx-auto flex max-w-5xl flex-col items-center justify-center gap-6 text-center sm:flex-row sm:gap-0">
+      <div class="px-8">
+        <p class="font-medium">Thousands of domains</p>
+      </div>
+
+      <span class="hidden h-1 w-1 rounded-full bg-accent sm:block"></span>
+
+      <div class="px-8">
+        <p class="font-medium">Simple pricing</p>
+      </div>
+
+      <span class="hidden h-1 w-1 rounded-full bg-accent sm:block"></span>
+
+      <div class="px-8">
+        <p class="font-medium">Easy to manage</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= EXTENTIONS ============== -->
+  <section class="mx-4 py-20 md:mx-12 md:py-28">
+    <div class="mx-auto max-w-6xl">
+      <div class="max-w-2xl">
+        <span class="text-sm font-medium uppercase tracking-widest text-accent"> Choose your extension </span>
+
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Find a domain that fits.</h2>
+
+        <p class="mt-5 text-lg text-text-muted">
+          From established classics to newer extensions, find a name that suits what you're building.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.com</span>
+          <p class="mt-2 text-sm text-text-muted">Classic</p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.co.uk</span>
+          <p class="mt-2 text-sm text-text-muted">UK businesses</p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.io</span>
+          <p class="mt-2 text-sm text-text-muted">Technology</p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.ai</span>
+          <p class="mt-2 text-sm text-text-muted">AI & tech</p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.dev</span>
+          <p class="mt-2 text-sm text-text-muted">Developers</p>
+        </div>
+
+        <div class="rounded-2xl border border-border bg-surface p-6">
+          <span class="text-2xl font-semibold">.net</span>
+          <p class="mt-2 text-sm text-text-muted">Established</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= BENEFITS ============== -->
+  <section class="mx-4 py-20 md:mx-12 md:py-28">
+    <div class="mx-auto max-w-6xl">
+      <div class="max-w-2xl">
+        <span class="text-sm font-medium uppercase tracking-widest text-accent"> Why Prime Domain </span>
+
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Everything you need to get online.</h2>
+
+        <p class="mt-5 text-lg text-text-muted">Find your domain, secure your name and manage everything from one simple place.</p>
+      </div>
+
+      <div class="mt-14 grid gap-6 md:grid-cols-3">
+        <article class="rounded-3xl shadow-md border border-border p-8">
+          <div class="mb-10 flex h-10 w-10 items-center justify-center">
+            <Sparkle class="text-accent/50" />
+          </div>
+
+          <h3 class="text-xl font-semibold">Simple from the start</h3>
+
+          <p class="mt-3 leading-7 text-text-muted">Search for a domain and get your idea moving without unnecessary complexity.</p>
+        </article>
+
+        <article class="rounded-3xl shadow-md border border-border p-8">
+          <div class="mb-10 flex h-10 w-10 items-center justify-center">
+            <Tag class="text-accent/50" />
+          </div>
+
+          <h3 class="text-xl font-semibold">Straightforward pricing</h3>
+
+          <p class="mt-3 leading-7 text-text-muted">Clear pricing means you know what you're getting before you commit.</p>
+        </article>
+
+        <article class="rounded-3xl shadow-md border border-border p-8">
+          <div class="mb-10 flex h-10 w-10 items-center justify-center">
+            <Trending class="text-accent/50" />
+          </div>
+
+          <h3 class="text-xl font-semibold">Built to grow with you</h3>
+
+          <p class="mt-3 leading-7 text-text-muted">Keep your domains organised and ready as your ideas grow.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= DASHBOARD MOCKUP ============== -->
+  <section class="mx-4 py-20 md:mx-12 md:py-28">
+    <div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <div>
+        <span class="text-sm font-medium uppercase tracking-widest text-accent"> Your domains, simplified </span>
+
+        <h2 class="mt-3 text-3xl font-semibold tracking-tight md:text-5xl">Everything in one place.</h2>
+
+        <p class="mt-5 max-w-lg text-lg text-text-muted">
+          Keep track of your domains without the clutter. Manage your names, renewals and settings from one simple dashboard.
+        </p>
+
+        <ul class="mt-8 space-y-4">
+          <li>Easy to manage</li>
+          <li>Clear renewal dates</li>
+          <li>Secure by default</li>
+        </ul>
+      </div>
+
+      <div class="overflow-hidden rounded-3xl border border-border bg-surface shadow-xl">
+        <!-- Window header -->
+        <div class="flex items-center justify-between border-b border-border px-5 py-4">
+          <div class="flex items-center gap-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-red-400"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-yellow-400"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-green-400"></span>
+          </div>
+
+          <span class="text-xs text-text-muted"> app.primedomain.com </span>
+
+          <div class="w-12"></div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="grid min-h-[420px] md:grid-cols-[150px_1fr]">
+          <!-- Aside -->
+          <aside class="hidden border-r border-border bg-background p-4 md:block">
+            <div class="mb-8 px-2">
+              <span class="text-sm font-semibold"> Prime Domain </span>
+            </div>
+
+            <nav class="space-y-1 text-sm">
+              <a href="#" class="block rounded-lg px-3 py-2 text-text-muted hover:bg-surface"> Dashboard </a>
+
+              <a href="#" class="block rounded-lg bg-accent/10 px-3 py-2 font-medium text-accent"> Domains </a>
+
+              <a href="#" class="block rounded-lg px-3 py-2 text-text-muted hover:bg-surface"> Billing </a>
+
+              <a href="#" class="block rounded-lg px-3 py-2 text-text-muted hover:bg-surface"> Settings </a>
+            </nav>
+          </aside>
+
+          <!-- Main dashboard -->
+          <main class="min-w-0 p-5 sm:p-6">
+            <div class="flex items-center justify-between gap-4">
+              <div>
+                <p class="text-xs text-text-muted">Domains</p>
+
+                <h3 class="mt-1 text-xl font-semibold">My domains</h3>
+              </div>
+
+              <button class="rounded-full bg-accent px-4 py-2 text-xs font-medium text-white"> + Add domain </button>
+            </div>
+
+            <!-- Domain list -->
+            <div class="mt-8 overflow-hidden rounded-2xl border border-border">
+              <div class="flex items-center justify-between gap-4 border-b border-border p-4">
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-medium">prime.co.uk</p>
+                  <p class="mt-1 text-xs text-text-muted">Renews 12 Mar 2027</p>
+                </div>
+
+                <span class="shrink-0 rounded-full bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-700"> Active </span>
+              </div>
+
+              <div class="flex items-center justify-between gap-4 border-b border-border p-4">
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-medium">prime.com</p>
+                  <p class="mt-1 text-xs text-text-muted">Renews 28 Jun 2027</p>
+                </div>
+
+                <span class="shrink-0 rounded-full bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-700"> Active </span>
+              </div>
+
+              <div class="flex items-center justify-between gap-4 p-4">
+                <div class="min-w-0">
+                  <p class="truncate text-sm font-medium">prime.ai</p>
+                  <p class="mt-1 text-xs text-text-muted">Renews 04 Nov 2027</p>
+                </div>
+
+                <span class="shrink-0 rounded-full bg-green-500/10 px-2.5 py-1 text-xs font-medium text-green-700"> Active </span>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============= FINAL CTA ============== -->
+  <GradientCta
+    eyebrow="Ready to find yours?"
+    title="Your next idea needs a name."
+    subtitle="Find a domain that fits what you're building and get your idea online."
+  />
+
+  <!-- ============= FOOTER ============== -->
+  <footer class="border-t border-border px-6 py-8">
+    <div class="mx-auto flex max-w-6xl flex-col gap-4 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between">
+      <span class="font-medium text-text"> Prime Domain </span>
+
+      <p>© {new Date().getFullYear()} Prime Domain. All rights reserved.</p>
+
+      <div class="flex gap-5">
+        <button type="button" class="transition-colors hover:text-text"> Privacy </button>
+
+        <button type="button" class="transition-colors hover:text-text"> Terms </button>
+      </div>
+    </div>
+  </footer>
+</DomainLayout>
