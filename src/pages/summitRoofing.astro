@@ -5,6 +5,11 @@ import { Image } from "astro:assets";
 import Shield from "../components/svgs/summitRoofing/Shield.astro";
 import Check from "../components/svgs/summitRoofing/Check.astro";
 import Money from "../components/svgs/summitRoofing/Money.astro";
+
+import roofReplacement from "../assets/images/roof_replacement.jpg";
+import roofRepair from "../assets/images/roof_repair.jpg";
+import roofInstall from "../assets/images/roof_install.jpg";
+import map from "../assets/images/yorkshire_map.webp";
 ---
 
 <SummitLayout title="Summit Roofing">
@@ -227,4 +232,282 @@ import Money from "../components/svgs/summitRoofing/Money.astro";
       </div>
     </div>
   </section>
+
+  <!-- =============== RECENT WORK ================= -->
+
+  <section class="bg-background px-6 py-24 md:px-12 md:py-32">
+    <div class="mx-auto max-w-7xl">
+      <!-- Section heading -->
+      <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+        <div class="max-w-2xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Recent work</p>
+
+          <h2 class="mt-4 font-heading text-4xl font-semibold tracking-tight text-surface md:text-5xl">Roofing projects we're proud of.</h2>
+
+          <p class="mt-5 max-w-xl text-base leading-7 text-surface/65 md:text-lg">
+            From individual repairs to complete roof replacements, here's a selection of work carried out across Yorkshire.
+          </p>
+        </div>
+
+        <a href="#" class="inline-flex w-fit items-center text-sm font-semibold text-surface transition-colors hover:text-accent">
+          View all projects
+          <span class="ml-2">→</span>
+        </a>
+      </div>
+
+      <!-- Featured project -->
+      <div class="group mt-14">
+        <!-- Image placeholder -->
+        <div class="aspect-video overflow-hidden rounded-sm bg-surface/10 md:aspect-21/9">
+          <Image src={roofReplacement} alt="Roof replacement" />
+        </div>
+
+        <!-- Project information -->
+        <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Complete roof replacement</p>
+
+            <h3 class="mt-2 font-heading text-2xl font-semibold text-surface md:text-3xl">Skipton, West Yorkshire</h3>
+
+            <p class="mt-3 max-w-2xl text-sm leading-6 text-surface/60">
+              A complete roof replacement carried out to improve the property's protection, appearance and long-term performance.
+            </p>
+          </div>
+
+          <a href="#" class="inline-flex shrink-0 items-center text-sm font-semibold text-surface transition-colors hover:text-accent">
+            View project
+            <span class="ml-2 transition-transform group-hover:translate-x-1"> → </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Smaller projects -->
+      <div class="mt-16 grid gap-10 md:grid-cols-2">
+        <!-- Project 2 -->
+        <article class="group">
+          <div class="overflow-hidden rounded-sm bg-surface/10">
+            <Image src={roofRepair} alt="Roof repair" />
+          </div>
+
+          <div class="mt-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Roof repairs</p>
+
+            <div class="mt-2 flex items-center justify-between">
+              <h3 class="font-heading text-2xl font-semibold text-surface">Leeds, West Yorkshire</h3>
+              <div>
+                <a
+                  href="#"
+                  class="inline-flex shrink-0 items-center text-sm font-semibold text-surface transition-colors hover:text-accent">
+                  View project
+                  <span class="ml-2 transition-transform group-hover:translate-x-1"> → </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="group">
+          <div class="overflow-hidden rounded-sm bg-surface/10">
+            <Image src={roofInstall} alt="Roof installation" />
+          </div>
+
+          <div class="mt-5">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">New roof installation</p>
+
+            <div class="mt-2 flex items-center justify-between">
+              <h3 class="font-heading text-2xl font-semibold text-surface">York, North Yorkshire</h3>
+              <div>
+                <a
+                  href="#"
+                  class="inline-flex shrink-0 items-center text-sm font-semibold text-surface transition-colors hover:text-accent">
+                  View project
+                  <span class="ml-2 transition-transform group-hover:translate-x-1"> → </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== SERVICE AREA ================= -->
+
+  <section class="bg-surface px-6 py-24 md:px-12 md:py-32">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid items-center gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+        <!-- Content -->
+        <div class="max-w-xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Areas we cover</p>
+
+          <h2 class="mt-4 font-heading text-4xl font-semibold tracking-tight text-background md:text-5xl">Roofing across Yorkshire.</h2>
+
+          <p class="mt-6 text-base leading-7 text-background/65 md:text-lg">
+            We provide roofing repairs, maintenance and replacement services for homeowners across Yorkshire. If you're nearby and you're
+            not sure whether we cover your area, get in touch and ask.
+          </p>
+
+          <!-- Areas -->
+          <div class="mt-8 border-y border-background/10 py-6">
+            <p class="text-xs font-semibold uppercase tracking-[0.16em] text-background/40">Areas we regularly cover</p>
+
+            <div class="mt-5 flex flex-wrap gap-x-6 gap-y-3">
+              <span class="text-sm font-medium text-background/80"> Harrogate </span>
+
+              <span class="text-sm font-medium text-background/80"> Leeds </span>
+
+              <span class="text-sm font-medium text-background/80"> York </span>
+
+              <span class="text-sm font-medium text-background/80"> Wetherby </span>
+
+              <span class="text-sm font-medium text-background/80"> Ripon </span>
+
+              <span class="text-sm font-medium text-background/80"> Surrounding areas </span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="mt-8">
+            <a
+              href="#quote"
+              class="inline-flex items-center rounded-xs bg-accent px-7 py-3.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5">
+              Check if we cover your area
+              <span class="ml-2">→</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="relative aspect-4/3 overflow-hidden rounded-sm bg-background/5">
+          <Image src={map} alt="Area location map of Yorkshire" class="h-full w-full object-cover saturate-0 brightness-75" />
+
+          <!-- Service area -->
+          <div class="absolute inset-[12%] left-20 rounded-full border-2 border-accent/70 bg-accent/10"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== TESTIMONIALS ================= -->
+
+  <section class="bg-background px-6 py-24 md:px-12 md:py-32">
+    <div class="mx-auto max-w-7xl">
+      <!-- Heading -->
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">What our customers say</p>
+
+        <h2 class="mt-4 font-heading text-4xl font-semibold tracking-tight text-surface md:text-5xl">Good work speaks for itself.</h2>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="mt-14 grid gap-px overflow-hidden rounded-sm bg-surface/10 md:grid-cols-3">
+        <!-- Testimonial 1 -->
+        <article class="bg-background p-8 md:p-10">
+          <div class="text-accent">★★★★★</div>
+
+          <blockquote class="mt-6 font-heading text-xl leading-8 text-surface">
+            “Summit replaced our old roof and the whole process was straightforward from start to finish. The work was completed quickly and
+            everything was left tidy.”
+          </blockquote>
+
+          <div class="mt-8 border-t border-surface/10 pt-5">
+            <p class="text-sm font-semibold text-surface">Sarah M.</p>
+
+            <p class="mt-1 text-xs text-surface/50">Skipton</p>
+          </div>
+        </article>
+
+        <!-- Testimonial 2 -->
+        <article class="bg-background p-8 md:p-10">
+          <div class="text-accent">★★★★★</div>
+
+          <blockquote class="mt-6 font-heading text-xl leading-8 text-surface">
+            “We had a leak that needed sorting quickly. They came out, explained what needed doing and got the repair sorted without any
+            fuss.”
+          </blockquote>
+
+          <div class="mt-8 border-t border-surface/10 pt-5">
+            <p class="text-sm font-semibold text-surface">James T.</p>
+
+            <p class="mt-1 text-xs text-surface/50">Leeds</p>
+          </div>
+        </article>
+
+        <!-- Testimonial 3 -->
+        <article class="bg-background p-8 md:p-10">
+          <div class="text-accent">★★★★★</div>
+
+          <blockquote class="mt-6 font-heading text-xl leading-8 text-surface">
+            “From the initial quote through to finishing the job, everything was clearly explained. Really pleased with the finished roof.”
+          </blockquote>
+
+          <div class="mt-8 border-t border-surface/10 pt-5">
+            <p class="text-sm font-semibold text-surface">David R.</p>
+
+            <p class="mt-1 text-xs text-surface/50">York</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============== FINAL CTA ================= -->
+
+  <section id="quote" class="bg-surface px-6 py-24 md:px-12 md:py-32">
+    <div class="mx-auto max-w-5xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Get a free quotation</p>
+
+      <h2 class="mt-5 font-heading text-4xl font-semibold tracking-tight text-background md:text-6xl">Ready to sort your roof?</h2>
+
+      <p class="mx-auto mt-6 max-w-2xl text-base leading-7 text-background/65 md:text-lg">
+        Whether you need a small repair or a complete roof replacement, get in touch for a free, no-obligation quotation.
+      </p>
+
+      <div class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a
+          href="#"
+          class="inline-flex items-center justify-center rounded-xs bg-accent px-7 py-3.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5">
+          Request a Free Quote
+          <span class="ml-2">→</span>
+        </a>
+
+        <a
+          href="tel:01234123456"
+          class="inline-flex items-center justify-center rounded-xs border border-background/15 px-7 py-3.5 text-sm font-semibold text-background transition-colors hover:border-background/30 hover:bg-background/5">
+          (01234) 123 456
+        </a>
+      </div>
+
+      <p class="mt-7 text-xs text-background/40">Free quotations · Fully insured · 20+ years' experience</p>
+    </div>
+  </section>
+
+  <!-- =============== FOOTER ================= -->
+
+  <footer class="border-t border-background/10 bg-surface px-6 py-10 md:px-12">
+    <div class="mx-auto flex max-w-7xl flex-col gap-8 md:flex-row md:items-center md:justify-between">
+      <!-- Brand -->
+      <div>
+        <p class="font-heading text-lg font-semibold text-background">Summit Roofing</p>
+
+        <p class="mt-1 text-sm text-background/50">Roofing & roof repairs across Yorkshire.</p>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-3 text-sm md:items-end">
+        <a href="tel:01234123456" class="font-semibold text-background transition-colors hover:text-accent"> (01234) 123 456 </a>
+
+        <a href="#quote" class="text-background/50 transition-colors hover:text-background"> Request a free quote → </a>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div
+      class="mx-auto mt-8 flex max-w-7xl flex-col gap-3 border-t border-background/10 pt-6 text-xs text-background/35 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {new Date().getFullYear()} Summit Roofing. All rights reserved.</p>
+
+      <p>Portfolio concept by Pennine Digital</p>
+    </div>
+  </footer>
 </SummitLayout>
