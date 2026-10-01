@@ -22,20 +22,33 @@ import map from "../assets/images/yorkshire_map.webp";
   </div>
 
   <header class="bg-surface">
-    <div class="max-w-7xl px-6 flex justify-between">
-      <div class="relative">
-        <a href="#"><img src="/summit_logo.png" alt="logo" class="w-26" /></a>
-        <span class="absolute bottom-4 uppercase font-semibold text-xs tracking-widest text-background font-heading min-w-max"
-          >Summit Roofing</span
-        >
-      </div>
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 md:py-2">
+      <a href="#" class="relative shrink-0">
+        <img src="/summit_logo.png" alt="Summit Roofing" class="w-24 md:w-28" />
 
-      <div class="flex flex-col md:flex-row items-center md:gap-6">
-        <span class="text-background text-xl py-3 md:py-0 font-semibold">(01234) 123 456</span>
-        <button class="py-2 px-6 inline min-w-max bg-accent text-background uppercase rounded-xs cursor-pointer hover:brightness-105"
-          >Request a free quote</button
-        >
+        <span
+          class="absolute bottom-1 left-1/2 -translate-x-1/2 whitespace-nowrap font-heading text-[9px] font-semibold uppercase tracking-[0.18em] text-background md:bottom-1.5 md:text-[10px]">
+          Summit Roofing
+        </span>
+      </a>
+
+      <div class="flex items-center gap-3 md:gap-6">
+        <a href="tel:01234123456" class="hidden text-sm font-semibold text-background transition-colors hover:text-accent sm:block">
+          (01234) 123 456
+        </a>
+
+        <a
+          href="#quote"
+          class="inline-flex items-center justify-center rounded-xs bg-accent px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-background transition-transform hover:-translate-y-0.5 md:px-6 md:text-sm">
+          Request a free quote
+        </a>
       </div>
+    </div>
+
+    <div class="border-t border-background/10 px-5 py-2.5 sm:hidden">
+      <a href="tel:01234123456" class="block text-center text-xs font-semibold text-background/70 transition-colors hover:text-background">
+        (01234) 123 456
+      </a>
     </div>
   </header>
 
@@ -129,7 +142,7 @@ import map from "../assets/images/yorkshire_map.webp";
         </div>
 
         <div class="divide-y divide-border border-y border-border">
-          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+          <a href="#quote" class="group flex items-center justify-between gap-6 py-7">
             <div>
               <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 01 </span>
 
@@ -143,7 +156,7 @@ import map from "../assets/images/yorkshire_map.webp";
             <span class="hidden text-2xl text-text/30 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block"> → </span>
           </a>
 
-          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+          <a href="#quote" class="group flex items-center justify-between gap-6 py-7">
             <div>
               <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 02 </span>
 
@@ -157,7 +170,7 @@ import map from "../assets/images/yorkshire_map.webp";
             <span class="hidden text-2xl text-text/30 transition-all group-hover:translate-x-1 group-hover:text-accent sm:block"> → </span>
           </a>
 
-          <a href="#" class="group flex items-center justify-between gap-6 py-7">
+          <a href="#quote" class="group flex items-center justify-between gap-6 py-7">
             <div>
               <span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent"> 03 </span>
 
@@ -197,7 +210,6 @@ import map from "../assets/images/yorkshire_map.webp";
       </div>
 
       <div class="mt-20 grid border-y border-background/15 md:grid-cols-3">
-        <!-- Item -->
         <div class="border-b border-background/15 py-10 md:border-r md:pr-10">
           <span class="font-heading text-4xl font-semibold text-accent"> 20+ </span>
 
@@ -208,7 +220,6 @@ import map from "../assets/images/yorkshire_map.webp";
           </p>
         </div>
 
-        <!-- Item -->
         <div class="border-b border-background/15 py-10 md:border-b-0 md:border-r md:px-10">
           <span class="font-heading text-4xl font-semibold text-accent"> 100% </span>
 
@@ -219,7 +230,6 @@ import map from "../assets/images/yorkshire_map.webp";
           </p>
         </div>
 
-        <!-- Item -->
         <div class="py-10 md:pl-10">
           <span class="font-heading text-4xl font-semibold text-accent uppercase"> Free </span>
 
@@ -237,7 +247,6 @@ import map from "../assets/images/yorkshire_map.webp";
 
   <section class="bg-background px-6 py-24 md:px-12 md:py-32">
     <div class="mx-auto max-w-7xl">
-      <!-- Section heading -->
       <div class="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div class="max-w-2xl">
           <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Recent work</p>
@@ -255,14 +264,11 @@ import map from "../assets/images/yorkshire_map.webp";
         </a>
       </div>
 
-      <!-- Featured project -->
       <div class="group mt-14">
-        <!-- Image placeholder -->
         <div class="aspect-video overflow-hidden rounded-sm bg-surface/10 md:aspect-21/9">
           <Image src={roofReplacement} alt="Roof replacement" />
         </div>
 
-        <!-- Project information -->
         <div class="mt-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
           <div>
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Complete roof replacement</p>
@@ -281,9 +287,7 @@ import map from "../assets/images/yorkshire_map.webp";
         </div>
       </div>
 
-      <!-- Smaller projects -->
       <div class="mt-16 grid gap-10 md:grid-cols-2">
-        <!-- Project 2 -->
         <article class="group">
           <div class="overflow-hidden rounded-sm bg-surface/10">
             <Image src={roofRepair} alt="Roof repair" />
@@ -292,7 +296,7 @@ import map from "../assets/images/yorkshire_map.webp";
           <div class="mt-5">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">Roof repairs</p>
 
-            <div class="mt-2 flex items-center justify-between">
+            <div class="mt-2 flex flex-col gap-2">
               <h3 class="font-heading text-2xl font-semibold text-surface">Leeds, West Yorkshire</h3>
               <div>
                 <a
@@ -306,7 +310,6 @@ import map from "../assets/images/yorkshire_map.webp";
           </div>
         </article>
 
-        <!-- Project 3 -->
         <article class="group">
           <div class="overflow-hidden rounded-sm bg-surface/10">
             <Image src={roofInstall} alt="Roof installation" />
@@ -315,7 +318,7 @@ import map from "../assets/images/yorkshire_map.webp";
           <div class="mt-5">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-accent">New roof installation</p>
 
-            <div class="mt-2 flex items-center justify-between">
+            <div class="mt-2 flex flex-col gap-2">
               <h3 class="font-heading text-2xl font-semibold text-surface">York, North Yorkshire</h3>
               <div>
                 <a

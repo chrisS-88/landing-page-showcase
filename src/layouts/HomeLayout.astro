@@ -1,6 +1,4 @@
 ---
-import Footer from "../components/layout/home/Footer.astro";
-import Header from "../components/layout/home/Header.astro";
 import "../styles/home.css";
 
 interface Props {
@@ -25,10 +23,8 @@ const { title = "Website Title" } = Astro.props;
   </head>
 
   <body>
-    <Header />
     <main>
       <slot />
     </main>
-    <Footer />
   </body>
 </html>

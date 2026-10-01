@@ -1,42 +1,169 @@
 ---
 import PortfolioCard from "../components/ui/home/PortfolioCard.astro";
 import HomeLayout from "../layouts/HomeLayout.astro";
+import primeMockup from "../assets/images/prime_screenshot.png";
+import summitMockup from "../assets/images/summit_screenshot.png";
 
 const projects = [
   {
+    image: primeMockup,
     title: "PrimeDomain.io",
-    description: "Sell premium digital assets with confidence.",
+    description: "A domain platform concept focused on making it easy for visitors to find and search for a domain.",
+    category: "Digital Product",
     href: "/primeDomain",
   },
   {
+    image: summitMockup,
     title: "Summit Roofing",
-    description: "Turn website visitors into qualified quote requests.",
+    description: "A local roofing website designed to turn visitors into quote enquiries with clear services, trust and calls to action.",
+    category: "Local Business",
     href: "/summitRoofing",
-  },
-  {
-    title: "FlowStack",
-    description: "Convert curious prospects into active users.",
-    href: "#",
   },
 ];
 ---
 
-<HomeLayout title="Landing Page Showcase">
-  <section class="pt-24">
-    <div class="max-w-4xl px-6 mx-auto">
-      <h1 class="text-4xl md:text-5xl font-bold">
-        Three landing pages <br />
-        Three industries <br />
-        One goal
-      </h1>
+<HomeLayout title="Chris Smart — Frontend Developer">
+  <!-- Header -->
+  <header class="border-b border-border">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 md:px-12">
+      <a href="/" class="font-heading text-lg font-semibold tracking-tight"> Chris Smart </a>
 
-      <p class="text-lg mt-3 text-text-muted">Responsive landing pages designed to turn visitors into customers.</p>
+      <div class="flex items-center gap-6">
+        <span class="hidden text-sm text-text-muted md:block"> Frontend Developer </span>
+      </div>
     </div>
-  </section>
+  </header>
 
-  <section class="py-24">
-    <div class="px-6 max-w-5xl grid md:grid-cols-3 gap-12 mx-auto">
-      {projects.map((project) => <PortfolioCard items={project} />)}
+  <!-- Hero -->
+  <main>
+    <section class="px-6 pb-28 pt-26 md:px-12 md:pb-40 md:pt-28">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-5xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Web Developer · Yorkshire</p>
+
+          <h1 class="mt-6 font-heading text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+            Hi, I'm Chris.
+            <br />
+            I build websites.
+          </h1>
+
+          <p class="mt-8 max-w-2xl text-lg leading-8 text-text-muted md:text-xl">
+            I'm a web developer from Yorkshire, interested in frontend development, design and building websites that are simple and easy to
+            use.
+          </p>
+        </div>
+
+        <div class="mt-12 flex items-center gap-4 text-sm font-medium">
+          <a
+            href="#work"
+            class="group inline-flex items-center gap-2 border-b border-text pb-1 transition-colors hover:border-accent hover:text-accent">
+            See my work
+            <span class="transition-transform group-hover:translate-x-1"> → </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Work -->
+    <section id="work" class="border-t border-border px-6 py-24 md:px-12 md:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div class="max-w-2xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">My work</p>
+
+            <h2 class="mt-4 font-heading text-4xl font-semibold tracking-tight md:text-5xl">Websites built to get results.</h2>
+          </div>
+
+          <p class="max-w-md text-sm leading-6 text-text-muted md:text-right">
+            I focus on making websites clear, easy to use and designed to guide visitors towards taking action.
+          </p>
+        </div>
+
+        <div class="mt-16 grid gap-10 md:grid-cols-2">
+          {projects.map((project) => <PortfolioCard items={project} />)}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-surface px-6 py-24 text-background md:px-12 md:py-32">
+      <div class="mx-auto max-w-7xl">
+        <div class="grid gap-12 md:grid-cols-2 md:items-end">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">What I focus on</p>
+
+            <h2 class="mt-4 max-w-xl font-heading text-4xl font-semibold leading-tight tracking-tight md:text-5xl">
+              Simple, useful websites that get people to take action.
+            </h2>
+          </div>
+
+          <p class="max-w-xl text-base leading-7 text-background/60 md:text-lg">
+            I try to keep things clear and focused. A visitor should quickly understand what a website is about, find what they need and
+            know what to do next.
+          </p>
+        </div>
+
+        <div class="mt-16 grid border-t border-background/10 md:grid-cols-3">
+          <div class="border-b border-background/10 py-8 md:border-b-0 md:border-r md:pr-10">
+            <span class="font-heading text-sm text-accent"> 01 </span>
+
+            <h3 class="mt-6 text-lg font-semibold">Clear design</h3>
+
+            <p class="mt-3 text-sm leading-6 text-background/50">
+              Clear layouts and strong visual hierarchy help visitors understand the business and find the information that matters.
+            </p>
+          </div>
+
+          <div class="border-b border-background/10 py-8 md:border-b-0 md:border-r md:px-10">
+            <span class="font-heading text-sm text-accent"> 02 </span>
+
+            <h3 class="mt-6 text-lg font-semibold">Built for action</h3>
+
+            <p class="mt-3 text-sm leading-6 text-background/50">
+              Calls to action are there for a reason, whether that's getting a quote, making a search or simply finding out more.
+            </p>
+          </div>
+
+          <div class="py-8 md:pl-10">
+            <span class="font-heading text-sm text-accent"> 03 </span>
+
+            <h3 class="mt-6 text-lg font-semibold">Fast and responsive</h3>
+
+            <p class="mt-3 text-sm leading-6 text-background/50">
+              I build with modern tools and keep things lightweight so websites work well across phones, tablets and desktops.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-6 py-28 md:px-12 md:py-40">
+      <div class="mx-auto max-w-7xl">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-accent">Get in touch</p>
+
+          <h2 class="mt-5 font-heading text-4xl font-semibold leading-tight tracking-tight md:text-6xl">Have a project in mind?</h2>
+
+          <p class="mt-6 max-w-xl text-base leading-7 text-text-muted">
+            I'm always interested in hearing about new projects, ideas and opportunities in frontend development and web design.
+          </p>
+
+          <a
+            href="mailto:YOUR-EMAIL-HERE"
+            class="group mt-8 inline-flex items-center gap-2 border-b border-text pb-1 text-sm font-semibold transition-colors hover:border-accent hover:text-accent">
+            Get in touch
+            <span class="transition-transform group-hover:translate-x-1"> → </span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-border py-8">
+    <div class="mx-auto flex max-w-7xl flex-col gap-3 px-6 text-sm text-text-muted sm:flex-row sm:items-center sm:justify-between md:px-12">
+      <p>Chris Smart</p>
+
+      <p>Built with Astro & Tailwind CSS</p>
     </div>
-  </section>
+  </footer>
 </HomeLayout>
